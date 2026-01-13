@@ -1,0 +1,8 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+
+/* Smooth scrolling for the whole page */
+html { 
+    scroll-behavior: smooth; 
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadevi Interlocking Bricks</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-white">
+
+    <header class="bg-[#aa4a44] text-white py-4 px-6 shadow-lg sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <h1 class="text-2xl font-bold tracking-tight">Ramadevi Interlocking Bricks</h1>
+            <a href="#products" class="text-sm hover:text-gray-200 transition">Products</a>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-br from-gray-50 to-gray-100 py-24 px-6 overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(90deg, #aa4a44 0px, #aa4a44 2px, transparent 2px, transparent 20px);"></div>
+        
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Build Stronger, Faster, Cheaper
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Premium interlocking bricks manufactured in Jangaon. Easy installation.
+            </p>
+            <a href="#products" class="bg-[#aa4a44] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#8d3d38] transition shadow-xl inline-flex items-center gap-2 group">
+                Explore Products
+                <i data-lucide="arrow-down" class="w-5 h-5 group-hover:translate-y-1 transition-transform"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl p-8 md:p-12 text-white">
+                <div class="flex items-center gap-3 mb-6">
+                   <div class="w-12 h-12 bg-[#aa4a44] rounded-lg flex items-center justify-center overflow-hidden">
+                        <img 
+                        src="photos/WhatsApp Image 2026-01-13 at 09.10.54.jpeg" 
+                        alt="Brick Icon" 
+                        class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-3xl font-bold">Brick Calculator</h3>
+                </div>
+                <p class="text-gray-300 mb-8">Calculate how many bricks you need for your project</p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-gray-200">Wall Length (ft)</label>
+                        <input type="number" id="wallLength" placeholder="e.g., 20" 
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 border-2 border-gray-600 text-white placeholder-gray-400 focus:border-[#aa4a44] focus:outline-none text-lg"
+                            oninput="calculate()">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-gray-200">Wall Height (ft)</label>
+                        <input type="number" id="wallHeight" placeholder="e.g., 10" 
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 border-2 border-gray-600 text-white placeholder-gray-400 focus:border-[#aa4a44] focus:outline-none text-lg"
+                            oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="bg-[#aa4a44] rounded-xl p-8 text-center">
+                    <p class="text-lg mb-2 opacity-90">Total Bricks Needed</p>
+                    <p class="text-6xl font-extrabold mb-4" id="totalBricksDisplay">0</p>
+                    
+                    <div id="priceSection" class="hidden border-t border-white/20 pt-4 mt-4">
+                        <p class="text-lg opacity-90">Price: ₹<span id="pricePerBrickDisplay">0</span>/brick</p>
+                        <p class="text-3xl font-bold mt-2">Total: ₹<span id="totalPriceDisplay">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-16 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">Our Products</h3>
+
+            <div class="max-w-md mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100 hover:shadow-2xl transition">
+                    
+                    <div class="relative h-64 bg-gradient-to-br from-[#aa4a44] to-[#8d3d38] flex items-center justify-center">
+                        <img 
+                        src="photos/WhatsApp Image 2026-01-13 at 10.26.08.jpeg" 
+                        alt="Brick Icon" 
+                        class="w-full h-full object-cover" />
+                        
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg">
+                            BEST SELLER
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">Cement Interlocking Brick</h4>
+                        <p class="text-gray-600 mb-6">Premium quality, Quick to install. Strong interlocking design.</p>
+
+                        <div class="bg-gray-50 rounded-xl p-5 mb-6">
+                            <h5 class="font-bold text-gray-900 mb-3 text-lg">Tiered Pricing</h5>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                    <span class="text-gray-700">1-500 bricks</span>
+                                    <span class="font-bold text-[#aa4a44] text-lg">₹40/each</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                    <span class="text-gray-700">501-2000 bricks</span>
+                                    <span class="font-bold text-[#aa4a44] text-lg">₹39/each</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2">
+                                    <span class="text-gray-700">2000+ bricks</span>
+                                    <span class="font-bold text-[#aa4a44] text-lg">₹38/each</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/7569444331?text=Hi, I'm interested in ordering interlocking bricks" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#aa4a44] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#8d3d38] transition">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">Why Choose Us</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-[#aa4a44] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i data-lucide="map-pin" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Made in Jangaon</h4>
+                    <p class="text-gray-600">Locally manufactured with premium quality materials</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-[#aa4a44] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i data-lucide="truck" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Delivery within 150km</h4>
+                    <p class="text-gray-600">Fast and reliable delivery to your doorstep</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-[#aa4a44] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i data-lucide="credit-card" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Pay on Delivery</h4>
+                    <p class="text-gray-600">Flexible payment options for your convenience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-2xl font-bold mb-4">Ramadevi Interlocking Bricks</h4>
+                    <p class="text-gray-400 mb-4">Premium quality interlocking bricks for all your construction needs</p>
+                    <div class="flex items-start gap-2">
+                        <a href="https://goo.gl/maps/ZcaKnzyGs3jG5qTSA" target="_blank" rel="noopener noreferrer" class="flex items-start gap-2 hover:text-white transition group cursor-pointer">
+                            <i data-lucide="map-pin" class="w-5 h-5 mt-1 flex-shrink-0 text-[#aa4a44]"></i>
+                            <p class="text-gray-300">
+                                Wanaparthy X-Road, Beside the Canal<br />
+                                Jangaon District, Telangana 506303<br />
+                                India
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+                    <p class="text-gray-300 mb-4">Phone: +91 75694 44331</p>
+                    <p class="text-gray-300 mb-4">Email: bollamramadevi4@gmail.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Ramadevi Interlocking Bricks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/7569444331?text=Hi, I'm interested in ordering interlocking bricks" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-4 rounded-full shadow-2xl hover:bg-green-600 transition flex items-center gap-3 font-semibold z-50 group">
+        <i data-lucide="message-circle" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+        Chat on WhatsApp
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
